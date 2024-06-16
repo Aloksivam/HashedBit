@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>H&M Shopping sites</title>
     <link rel="icon" href="h&mlogo.png" type="img-png">
-    <style>
+    <link rel="stylesheet" href="style.css">
+    <!-- <style>
         header {
     display: flex;
     justify-content: space-between;
@@ -14,7 +15,29 @@
     background-color: #ffffff;
 
 }
-    </style>
+
+ul li{
+    list-style-type: none;
+    display: inline;
+    margin-right: 12px;
+}
+ul li a{
+    text-decoration: none;
+    color: wheat;
+}
+.container{
+    float: left;
+    text-decoration: none;
+    background-color: red;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    margin: 12px;
+    padding: 12px;
+    width: 100vw;
+
+}
+    </style> -->
 </head>
 <body>
     <header>
@@ -26,8 +49,59 @@
             <a href="https://www.facebook.com/nike/"><img src="https://www.kindpng.com/picc/m/21-210003_facebook-png-white-black-facebook-logo-transparent-png.png" width="20px" height="auto"></a>
             <a href="https://www.twitter.com/nike/"><img src="https://cdn.freebiesupply.com/logos/large/2x/twitter-logo-black-and-white.png" width="23px" height="auto"></a>
         </div>
-    </header>
-    <main></main>
-    <footer></footer>
+        </header>
+        <nav class="menubar">
+            <ul class="container">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#home">Services</a></li>
+                <li><a href="#home">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+           <div class="sidebar">
+             <ul><h3>Offers</h3>
+                <li><a href="">Member Exclusive Prices</a></li>
+                <li><a href="">Flat 40% off</a></li>
+             </ul>
+             <ul><h3>New Arrivals</h3>
+                <li><a href="">View All</a></li>
+                <li><a href="">Clothes</a></li>
+                <li><a href="">Shoes & Accessories</a></li>
+             </ul>
+             <ul><h3>Lookbook</h3>
+                <li><a href="">Casual Looks</a></li>
+                <li><a href="">Smart Looks</a></li>
+                <li><a href="">Street Looks</a></li>
+                <li><a href="">Aehleisure Looks</a></li>
+             </ul>
+             <ul><h3>Trending now</h3>
+                <li><a href="">Trending Now</a></li>
+            
+             </ul>
+           </div>
+            <main class="content">
+                <div class="box">
+                    <h3>Regular Fit Short-sleeved shirt.</h3>
+                    <img src="https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2Fb7%2F26%2Fb726ae95f965b7bfa6af73f8d829aadab5fee717.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D" alt="Image 1">
+                    <p>Short-sleeved shirt in a cotton weave with a turn-down collar, classic front, yoke at the back, chest pocket and a rounded hem. Regular fit for comfortable wear and a classic silhouette.</p>
+                </div>
+                <div class="box">
+                    <h3>Regular Fit Cropped cotton chinos</h3>
+                    <img src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F1f%2Fb4%2F1fb488ae03cec805ba779f9653c231b1c9a1dc74.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/fullscreen]" alt="Image 2">
+                    <p>Cropped chinos in stretch cotton twill with a zip fly and button, side pockets and welt back pockets with a button. Regular fit for comfortable wear and a classic silhouette..</p>
+                </div>
+                <div class="box">
+                    <h3>Regular Fit Rib-knit polo shirt</h3>
+                    <img src="https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F2c%2Fab%2F2cab82b1ccdcf394e51180c1ef81deac26e15b3a.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D" alt="Image 3">
+                    <p>Polo shirt in a fine, rib-knit linen blend with a collar, small V-shaped opening at the top and short sleeves. Ribbed trim at the cuffs and hem. Regular fit for comfortable wear and a classic silhouette..</p>
+                </div>
+            </main>
+        </div>
+        <footer>
+            <p>The content of this site is copyright-protected and is the property of H & M Hennes & Mauritz AB.</p>
+            
+        </footer>
 </body>
 </html>
