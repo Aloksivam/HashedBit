@@ -110,8 +110,11 @@ console.log(StudentAvg(students))
 // { name: "Sai", average: 70 },
 // { name: "Hemang", average: 85 },
 // ];
-// Use array.map and array.reduce.
 
+// for(i of students){
+    console.log(students.map((i)=>i.scores).reduce((a,b)=>a+b,0))
+// Use array.map and array.reduce.
+const result=
 
 
 // Q8) Write a function to find repeated sum of digits until there is only a single digit in the number.
