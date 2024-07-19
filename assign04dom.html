@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assign04 Dom manipulation</title>
+    <style>
+      .container {
+        border: 1px solid black;
+        padding: auto;
+        text-align: center;
+
+      }
+    </style>
+  </head>
+  <body class="container">
+    <div class="text-here" id="text-container">This is some example text</div>
+    <input type="text" id="colorbox" placeholder="Enter color" />
+    <button id="colorchange" onclick="bcchange()">Change Colour</button>
+
+    <br /><br />
+
+    <input
+      type="range"
+      id="fontsize"
+      min="10"
+      max="100"
+      value="55"
+      onchange="sizeControl()"
+    />
+    <br /><br />
+
+    <button id="italic" class="stylebt" onclick="toggleFontStyle()">Italics</button>
+    <button id="underline" class="stylebt" onclick="toggleTextDecoration()">Underline</button>
+    <button id="bold" class="stylebt" onclick="toggleFontWeight()">Bold</button>
+    <br /><br />
+    <select id="list" onchange="familyChange()">
+      <option value="serif">Serif</option>
+      <option value="sans-serif">Sans-Serif</option>
+      <option value="monospace">Monospace</option>
+      <option value="cursive">Cursive</option>
+      <option value="fantasy">Fantasy</option>
+    </select>
+
+    <br /><br />
+
+    <button id="getstyle" onclick="getCSS()">Get CSS</button>
+
+    <br /><br />
+    <p id="css-props"></p>
+
+    <script>
+      function bcchange() {
+        let el = document.getElementById("text-container");
+        let el2 = document.getElementById("colorbox");
+        el.style.color = el2.value;
+      }
+
+      function sizeControl() {
+        let el = document.getElementById("text-container");
+        let el2 = document.getElementById("fontsize");
+        el.style.fontSize = el2.value + "px";
+      }
+
+      function toggleFontStyle() {
+        let textContainer = document.getElementById("text-container");
+        textContainer.style.fontStyle = textContainer.style.fontStyle === 'italic' ? 'normal' : 'italic';
+      }
+
+      function toggleTextDecoration() {
+        let textContainer = document.getElementById("text-container");
+        textContainer.style.textDecoration = textContainer.style.textDecoration === 'underline' ? 'none' : 'underline';
+      }
+
+      function toggleFontWeight() {
+        let textContainer = document.getElementById("text-container");
+        textContainer.style.fontWeight = textContainer.style.fontWeight === 'bold' ? 'normal' : 'bold';
+      }
+
+      function familyChange() {
+        let textContainer = document.getElementById("text-container");
+        let vl = document.getElementById("list");
+        textContainer.style.fontFamily = vl.value;
+      }
+
+      function getCSS() {
+        let textContainer = document.getElementById("text-container");
+        let cssProps = `
+          Color: ${textContainer.style.color};
+          Font Size: ${textContainer.style.fontSize};
+          Font Style: ${textContainer.style.fontStyle};
+          Text Decoration: ${textContainer.style.textDecoration};
+          Font Weight: ${textContainer.style.fontWeight};
+          Font Family: ${textContainer.style.fontFamily};
+        `;
+        document.getElementById("css-props").innerText = cssProps;
+      }
+    </script>
+  </body>
+</html>
